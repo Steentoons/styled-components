@@ -1,36 +1,84 @@
 import styled from "styled-components";
 
-export const NavContainer = styled.nav `
+export const MobileOverlayHolder = styled.div`
   width: 100%;
-  padding: 1em 2em;
-  display: flex;
-  justify-content: space-between;
-  background-color: #fafafa;
+  position: relative;
+  display: block;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+`;
+export const MobileOverlay = styled.div`
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  z-index: +2;
 `;
 
-export const NavLeftSection = styled.div `
-  width: 50%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
-
-export const NavRightSection = styled.div ``;
-
-export const NavMenus = styled.div `
-  display: flex;
-  flex-shrink: 0;
-
-  & ul {
+export const NavContainer = styled.nav`
+  @media screen and (min-width: 768px) {
+    width: 100%;
+    padding: 1em 2em;
     display: flex;
-    align-items: center;
-    padding: 0 3em;
+    justify-content: space-between;
+    background-color: #fafafa;
   }
 `;
 
-export const List = styled.li `
+export const NavLeftSection = styled.div`
+
+  @media screen and (min-width: 768px) {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+`;
+
+export const NavRightSection = styled.div`
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+`;
+
+export const NavListsContainerDesktop = styled.div`
+  display: none;
+  align-self: center;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+`;
+
+export const NavMenus = styled.div`
+  width: 12em;
+  height: 100vh;
+  background: white;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-shrink: 0;
+    background: none;
+    width: auto; 
+    height: auto;
+
+    & ul {
+      display: flex;
+      align-items: center;
+      padding: 0 3em;
+    }
+  }
+`;
+
+export const List = styled.li`
   list-style: none;
-  margin-right: 3em;
+  margin-right: 1em;
   cursor: pointer;
   color: hsl(0, 0%, 41%);
   min-width: 100px;
@@ -40,40 +88,48 @@ export const List = styled.li `
   }
 `;
 
-export const ListDiv = styled.div `
-  font-size: 16px;
+export const ListDiv = styled.div`
+  font-size: 14px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.2em;
-
 `;
 
-export const Label = styled.p `
-  font-size: 16px;
+export const MenuBars = styled.img`
+  width: 1.3em;
+  display: block;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 `;
 
-export const Dropdown = styled.img `
+export const Label = styled.p`
+  font-size: 14px;
+`;
+
+export const Dropdown = styled.img`
   margin-left: 0.5em;
 `;
 
-export const Logo = styled.img `
+export const Logo = styled.img`
   height: 1em;
   width: auto;
   fill: red;
   margin-top: 0.2em;
 `;
 
-export const NavRightButtons = styled.div `
+export const NavRightButtons = styled.div`
   display: flex;
   justify-content: flex-end;
 `;
 
-export const Button = styled.button `
+export const Button = styled.button`
   border: ${(props) => props.border};
   border-radius: 10px;
   background: none;
-  font-size: 16px;
+  font-size: 14px;
   color: hsl(0, 0%, 41%);
   padding: 0.7em 2em;
   cursor: pointer;
@@ -84,42 +140,42 @@ export const Button = styled.button `
   }
 `;
 
-export const ListDropdownDiv = styled.div `
-  width: 100%; 
+export const ListDropdownDiv = styled.div`
+  width: 100%;
   position: relative;
-`
+`;
 
-export const ListDropdownAbsoluteDiv = styled.div `
+export const ListDropdownAbsoluteDiv = styled.div`
   position: absolute;
   background: white;
   border-radius: 10px;
-  box-shadow: ;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   width: 170px;
   margin-left: -70px;
   padding: 1em;
   margin-top: 1em;
-`
+`;
 
-export const Menus = styled.div `
+export const Menus = styled.div`
   width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: .3em;
-  margin-bottom: .2em;
-`
+  padding: 0.3em;
+  margin-bottom: 0.2em;
+`;
 
-export const MenuImage = styled.img `
-  width: .8em;
-`
+export const MenuImage = styled.img`
+  width: 0.8em;
+`;
 
-export const MenuItem = styled.div `
+export const MenuItem = styled.div`
   color: hsl(0, 0%, 41%);
-  font-size: 16px;
-  padding-top: .2em;
-  margin-left: .5em;
+  font-size: 14px;
+  padding-top: 0.2em;
+  margin-left: 0.5em;
 
   &:hover {
     color: hsl(0, 0%, 8%);
   }
-`
+`;
