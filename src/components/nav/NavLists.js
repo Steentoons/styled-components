@@ -11,7 +11,10 @@ import {
   Menus,
   MenuImage,
   MenuItem,
+  NavButtonModuleMobile
 } from "./Nav.style";
+
+import NavRightButtonMolule from "./NavRightButtonMolule";
 
 import dropdornImage from "../../assets/images/icon-arrow-down.svg";
 import menuImg from "../../assets/images/icon-todo.svg";
@@ -84,6 +87,10 @@ const NavLists = () => {
           </ListDiv>
         </List>
       </ul>
+
+      <NavButtonModuleMobile>
+        <NavRightButtonMolule />
+      </NavButtonModuleMobile>
     </NavMenus>
   );
 };

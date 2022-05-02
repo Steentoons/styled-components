@@ -28,7 +28,6 @@ export const NavContainer = styled.nav`
 `;
 
 export const NavLeftSection = styled.div`
-
   @media screen and (min-width: 768px) {
     width: 50%;
     display: flex;
@@ -60,13 +59,16 @@ export const NavMenus = styled.div`
   background: white;
   justify-content: flex-start;
   align-items: flex-start;
+  margin-left: auto;
+  padding: 1em;
 
   @media screen and (min-width: 768px) {
     display: flex;
     flex-shrink: 0;
     background: none;
-    width: auto; 
+    width: auto;
     height: auto;
+    padding: 0;
 
     & ul {
       display: flex;
@@ -82,14 +84,19 @@ export const List = styled.li`
   cursor: pointer;
   color: hsl(0, 0%, 41%);
   min-width: 100px;
+  margin-top: 1em;
 
   &:hover {
     color: hsl(0, 0%, 8%);
   }
+
+  @media screen and (min-width: 768px) {
+    margin-top: 0;
+  }
 `;
 
 export const ListDiv = styled.div`
-  font-size: 14px;
+  font-size: 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -106,7 +113,7 @@ export const MenuBars = styled.img`
 `;
 
 export const Label = styled.p`
-  font-size: 14px;
+  font-size: 16px;
 `;
 
 export const Dropdown = styled.img`
@@ -122,14 +129,30 @@ export const Logo = styled.img`
 
 export const NavRightButtons = styled.div`
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2em;
+  @media screen and (min-width: 768px) {
+    display: flex;
   justify-content: flex-end;
+  flex-direction: row;
+  margin-top: 0;
+  }
+`;
+
+export const NavButtonModuleMobile = styled.div`
+  display: flex;
+  justify-content: center;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 `;
 
 export const Button = styled.button`
   border: ${(props) => props.border};
   border-radius: 10px;
   background: none;
-  font-size: 14px;
+  font-size: 16px;
   color: hsl(0, 0%, 41%);
   padding: 0.7em 2em;
   cursor: pointer;
@@ -137,6 +160,10 @@ export const Button = styled.button`
   &:hover {
     border: ${(props) => props.borderHover};
     color: hsl(0, 0%, 8%);
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 0.7em 4em;
   }
 `;
 
@@ -146,14 +173,20 @@ export const ListDropdownDiv = styled.div`
 `;
 
 export const ListDropdownAbsoluteDiv = styled.div`
-  position: absolute;
-  background: white;
-  border-radius: 10px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  width: 170px;
-  margin-left: -70px;
-  padding: 1em;
-  margin-top: 1em;
+  margin: 0;
+  margin-left: 1.2em;
+  padding-top: 0.7em;
+
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    background: white;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: 170px;
+    margin-left: -70px;
+    padding: 1em;
+    margin-top: 1em;
+  }
 `;
 
 export const Menus = styled.div`
@@ -171,7 +204,7 @@ export const MenuImage = styled.img`
 
 export const MenuItem = styled.div`
   color: hsl(0, 0%, 41%);
-  font-size: 14px;
+  font-size: 16px;
   padding-top: 0.2em;
   margin-left: 0.5em;
 

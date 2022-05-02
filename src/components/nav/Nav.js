@@ -4,13 +4,12 @@ import {
   NavLeftSection,
   NavRightSection,
   Logo,
-  NavRightButtons,
-  Button,
   NavListsContainerDesktop,
   MenuBars
 } from "./Nav.style";
 import LogoImg from "../../assets/images/logo.svg";
 import Bars from "../../assets/images/icon-menu.svg";
+import NavRightButtonMolule from "./NavRightButtonMolule";
 import NavLists from "./NavLists";
 
 const Nav = () => {
@@ -23,17 +22,7 @@ const Nav = () => {
         </NavListsContainerDesktop>
       </NavLeftSection>
       <NavRightSection>
-        <NavRightButtons>
-          <Button border="none" borderHover="none">
-            Login
-          </Button>
-          <Button
-            border="solid hsl(0, 0%, 41%) 2px"
-            borderHover="solid hsl(0, 0%, 8%) 2px"
-          >
-            Register
-          </Button>
-        </NavRightButtons>
+        <NavRightButtonMolule />
       </NavRightSection>
 
       <MenuBars src={Bars} alt="menu bars" />
