@@ -1,9 +1,10 @@
-import styled from "styled-components";
+import styled from "styled-components/macro";
 
 export const MobileOverlayHolder = styled.div`
   width: 100%;
   position: relative;
-  display: block;
+  /* display: block; */
+  display: none;
 
   @media screen and (min-width: 768px) {
     display: none;
@@ -18,6 +19,12 @@ export const MobileOverlay = styled.div`
 `;
 
 export const NavContainer = styled.nav`
+width: 100%;
+    padding: 1em 2em;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fafafa;
+
   @media screen and (min-width: 768px) {
     width: 100%;
     padding: 1em 2em;

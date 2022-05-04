@@ -1,6 +1,6 @@
-import styled, { createGlobalStyle } from "styled-components"
-import Font500 from "./assets/fonts/Epilogue-Medium.ttf"
-import Font700 from "./assets/fonts/Epilogue-Bold.ttf"
+import styled, { createGlobalStyle } from "styled-components/macro";
+import Font500 from "./assets/fonts/Epilogue-Medium.ttf";
+import Font700 from "./assets/fonts/Epilogue-Bold.ttf";
 
 const GlobalStyle = createGlobalStyle `
 
@@ -22,19 +22,25 @@ const GlobalStyle = createGlobalStyle `
     }
 
     body {
-        background: #FAFAFA;
+        background: "red";
     }
 
-`
+`;
 
 export const MainContainer = styled.div `
-    width: 100%;
-    background-color: white;
-`
+  width: 100%;
+  background-color: ${(props) => props.theme.whiteShade};
+`;
 
 export const WrapperContainer = styled.div `
-    background: white;
-    width: 100%;
-`
+  background-color: ${(props) => props.theme.whiteShade};
+  width: 100%;
+`;
 
-export default GlobalStyle
+export const theme = {
+    whiteShade: "#FAFAFA",
+    mediumGray: "hsl(0, 0%, 41%)",
+    almostBlack: "hsl(0, 0%, 8%)"
+};
+
+export default GlobalStyle;
