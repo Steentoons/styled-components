@@ -22,7 +22,7 @@ const GlobalStyle = createGlobalStyle `
     }
 
     body {
-        background: "red";
+        background: #FAFAFA;
     }
 
 `;
